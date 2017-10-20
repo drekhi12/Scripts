@@ -24,12 +24,5 @@ def scrape_quora(url):
         output['answers'].append(ans)
     json_object = json.dumps(output, ensure_ascii=False, indent=4)
     io.open('quora_output.json', 'w').write(json_object)
-    
-def main(url):`
-    hostname = str(urlparse(str(url)).hostname.split('.')[1]).lower()
-    if hostname == "quora":
-        scrape_quora(url)
-    else:
-        print "Give a valid URL"
 
-main(URL)
+scrape_quora(URL)
